@@ -12,3 +12,8 @@ inherit_from: .rubocop_todo.yml
 # See https://github.com/rubocop-hq/rubocop/blob/master/manual/configuration.md
 AllCops:
   TargetRubyVersion: 2.7
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Naming/MethodParameterName:
+  Enabled: false
