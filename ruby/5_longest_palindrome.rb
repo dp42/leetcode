@@ -3,7 +3,6 @@ require 'benchmark'
 # @param {String} s
 # @return {String}
 def longest_palindrome(s)
-
   return s if s == s.reverse
   return s if s.length < 2
 
