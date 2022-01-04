@@ -17,6 +17,11 @@ def longest_palindrome(s)
   while i >= 0
     searched[i][i] = true
     searched[i][i + 1] = (s[i] == s[i + 1])
+
+    if s[i] == s[i + 1]
+      searched[i][i + 1] = true
+      start = i
+    end
     i -= 1
   end
 
@@ -34,6 +39,7 @@ def longest_palindrome(s)
       searched[i][j] = (s[i] == s[j] && searched[i + 1][j - 1])
       if searched[i][j] && j - i + 1 > maxlen
         maxlen = j - i + 1
+        start = i
       end
       j -= 1
     end
